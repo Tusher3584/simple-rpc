@@ -2,7 +2,7 @@
 
 async function remoteAdd(a, b) {
     try {
-        const response = await axios.post('http://localhost:3000/add', {
+        const response = await axios.post('https://endless-troll-evidently.ngrok-free.app/add', {
             a, b
         });
         return response.data.result;
@@ -12,7 +12,7 @@ async function remoteAdd(a, b) {
 }
 
 // Call remote function as if it's local
-remoteAdd(5, 3).then(result => {
+remoteAdd(10, 3).then(result => {
     console.log('Result from RPC server:', result);
 });
 
